@@ -1,0 +1,272 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.4s ease-in-out;
+}
+
+h1, h2, h3, p, label {
+    color: #fff; /* White text */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.4s ease;
+}
+
+header:hover {
+    background-color: #222; /* Slight color change on hover */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ff4081; /* Header text in pink */
+    animation: fadeIn 1s ease-in-out;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    animation: slideIn 1s ease-in-out;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ff4081; /* Link color in pink */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #fff; /* Hover effect on links */
+    transform: scale(1.1); /* Enlarge slightly on hover */
+}
+
+/* Service Section */
+.service-selection {
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent section */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.service-category {
+    margin-bottom: 30px;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.service-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff4081; /* Category heading color */
+    text-transform: uppercase;
+}
+
+.service-category div {
+    margin: 15px 0;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Advanced Button Styles */
+button {
+    background-color: #ff4081; /* Button background in pink */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+}
+
+button:hover {
+    background-color: #ff669a; /* Lighter pink on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.6); /* More prominent shadow on hover */
+}
+
+button:active {
+    transform: scale(0.98) translateY(0); /* Click effect */
+}
+
+button.remove-from-cart {
+    background-color: #444; /* Dark gray for remove buttons */
+}
+
+button.remove-from-cart:hover {
+    background-color: #666; /* Lighter gray on hover */
+}
+
+/* Checkout Section */
+.checkout {
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    background-color: #1c1c1c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #ff4081;
+    position: relative;
+}
+
+#cart-items li::before {
+    content: "🛒";
+    position: absolute;
+    left: -30px;
+    font-size: 1.5rem;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ff4081;
+    animation: pulse 1s infinite;
+}
+
+#checkout-btn {
+    display: block;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.4);
+}
+
+#checkout-btn:hover {
+    background-color: #ff669a;
+    transform: translateY(-3px); /* Lift effect */
+}
+
+#checkout-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #ff4081; /* Footer text in pink */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .service-selection, .checkout {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    #checkout-btn {
+        padding: 12px 20px;
+    }
+}

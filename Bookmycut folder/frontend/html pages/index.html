@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmycut - Advanced Grooming Services</title>
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}"> -->
+
+
+  <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Bookmycut</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">signup</a></li>
+       <!-- <li><a href="{{ url_for('signup') }}">Sign Up</a></li> -->
+      <li><a href="Aboutus.html">About Us</a></li>
+      <!-- <li><button id="darkModeToggle">Dark Mode</button></li> -->
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Bookmycut</h1>
+    <p>Your personalized grooming experience starts here!</p>
+    <a href="booking.html" class="cta-btn">Book Now</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="{{ url_for('static', filename='Images/haircut2.jpeg') }}" alt="Haircut">
+        <h3>Haircut</h3>
+        <p>₹120 - Get the perfect look with our professional stylists.</p>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='Images/shaving.jpeg') }}" alt="Shaving">
+        <h3>Shave</h3>
+        <p>₹80 - Clean and sharp shaves with premium products.</p>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='Images/spa.jpeg') }}" alt="Spa">
+        <h3>Spa Treatment</h3>
+        <p>₹699 - Relax and rejuvenate with our premium spa services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Bookmycut. All Rights Reserved.</p>
+    <ul class="social-links">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </footer>
+
+  <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+</body>
+</html>

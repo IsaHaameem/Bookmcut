@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page - Bookmycut</title>
+    <link rel="stylesheet" href="..\css\booking.css">
+</head>
+<body>
+    <header>
+        <h1>Bookmycut</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="aboutus.html">About Us</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+                <li><a href="logout.html">Logout</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>Booking Form</h2>
+            <form id="bookingForm" onsubmit="redirectToServices(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="date">Date of Appointment:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Time of Appointment:</label>
+                <select id="time" required>
+                    <option value="">Select Time</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="01:00">01:00 PM</option>
+                    <option value="02:00">02:00 PM</option>
+                    <option value="03:00">03:00 PM</option>
+                    <option value="04:00">04:00 PM</option>
+                    <option value="05:00">05:00 PM</option>
+                    <option value="06:00">06:00 PM</option>
+                    <option value="07:00">07:00 PM</option>
+                    <option value="08:00">08:00 PM</option>
+                    <option value="09:00">09:00 PM</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <select id="location" required>
+                    <option value="">Select Salon Branch</option>
+                    <option value="branch1">Ramapuram</option>
+                    <option value="branch2">Velachery</option>
+                    <option value="branch3">Teynampet</option>
+                    <option value="branch3">Royapettah</option>
+                    <option value="branch3">Saidapet</option>
+                    <option value="branch3">Nungambakkam</option>
+                </select>
+
+                <!-- <label for="notes">Additional Notes:</label> -->
+                <!-- <textarea id="notes" rows="4"></textarea> -->
+
+                <button type="submit">Proceed to Services</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bookmycut. All rights reserved.</p>
+    </footer>
+    <script src="..\javascript\booking.js"></script>
+
+
+    <script>
+        function redirectToServices(event) {
+            event.preventDefault(); // Prevent form submission
+            // Optionally, you can save booking information here before redirecting
+            window.location.href = 'services.html'; // Redirect to services page
+        }
+    </script>
+</body>
+</html>

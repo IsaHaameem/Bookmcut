@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Bookmycut</title>
+  <link rel="stylesheet" href="..\css\signup.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create an Account</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <span class="error-message" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+        <span class="error-message" id="phoneError"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Create a password">
+        <button type="button" id="togglePassword" aria-label="Toggle password visibility">👁️</button>
+        <span class="error-message" id="passwordError"></span>
+      </div>
+      <button type="submit" class="signup-button">Sign Up</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+  <script src="..\javascript\signup.js"></script>
+</body>
+</html>

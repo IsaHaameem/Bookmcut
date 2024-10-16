@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="..\css\checkout.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h2>Order Summary</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <li>Haircut - ₹500</li>
+                <li>Shaving - ₹300</li>
+                <li>Skincare - ₹600</li>
+            </ul>
+
+            <div class="total-section">
+                <p>Total Amount: <span id="total-amount">₹1400</span></p>
+                <button id="pay-btn">Proceed to Pay</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Bookmycut. All rights reserved.</p>
+    </footer>
+
+    <!-- Razorpay script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="..\javascript\checkout.js"></script>
+</body>
+</html>
